@@ -1,0 +1,38 @@
+{
+    "name": "Group Guardian",
+    "description": "Telegram Group Cleaner is an open source Telegram bot designed to help group administrators maintain a clean and safe environment for their communities.",
+    "logo": "",
+    "keywords": [
+        "Pyrogram",
+        "bot",
+        "nsfw Bot",
+        "Telegram Bot",
+        "NacBots"
+    ],
+    "website": "https://t.me/NacBots",
+    "repository": "https://github.com/nacbots/BroadcastBot",
+    "success_url": "https://github.com/nacbots",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "You Telegram Bot Token from @BotFather",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Your APP ID from my.telegram.org",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {"url": "heroku/python"}
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
