@@ -5,6 +5,8 @@ import config
 
 url = "https://api.safone.me/nsfw"
 slangf = 'slang_words.txt'
+with open(slangf, 'r') as f:
+    slang_words = set(line.strip().lower() for line in f)
 
 Bot = Client(
     "antinude",
@@ -60,8 +62,6 @@ async def slang(bot, message):
         sentence = message.text
         sent = re.sub(r'\W+', ' ', sentence)
         isslang = False
-        with open(slangf, 'r') as f:
-            slang_words = set(line.strip().lower() for line in f)
         for word in sent.split():
             if word.lower() in slang_words:
                 isslang = True
