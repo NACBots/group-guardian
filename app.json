@@ -24,6 +24,11 @@
         "API_ID": {
             "description": "Your APP ID from my.telegram.org",
             "required": true
+        },
+        "SPOILER_MODE": {
+            "description": "Value should be True or False. Send photo/message as Spoiler if True. Default is True",
+            "value": "True",
+            "required": false
         }
     },
     "buildpacks": [

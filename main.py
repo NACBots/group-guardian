@@ -4,6 +4,7 @@ import re
 import config 
 
 url = "https://api.safone.me/nsfw"
+SPOILER = config.SPOILER_MODE
 slangf = 'slang_words.txt'
 with open(slangf, 'r') as f:
     slang_words = set(line.strip().lower() for line in f)
@@ -45,7 +46,8 @@ async def image(bot, message):
         if nsfw:
             name = message.from_user.first_name
             await message.delete()
-            await message.reply_photo(x, caption=f"""**WARNING ⚠️** (nude photo)
+            if SPOILER:
+                await message.reply_photo(x, caption=f"""**WARNING ⚠️** (nude photo)
 
  **{name}** sent a nude photo
 
@@ -73,7 +75,8 @@ async def slang(bot, message):
             
 {sentence}
             """
-            await message.reply(msgtxt)
+            if SPOILER:
+                await message.reply(msgtxt)
 
 #--------------------------------------------------------------------------------------------------
 
