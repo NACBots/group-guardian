@@ -1,5 +1,5 @@
 # Group Guardian
-<img src="https://te.legra.ph/file/d96c5ab85f759efae0c26.jpg">
+<img src="https://github.com/NACBots/Assets/blob/b5b62968409700d75ab061ca8c5960ca29fa4bd1/grpgdn.jpg">
 Group Guardian is an open source Telegram bot designed to help group administrators maintain a clean and safe environment for their communities. The bot offers two main functionalities:
 
 - **Word Slagging:** With the word slagging feature, the bot can detect and remove inappropriate language or spam messages in a group.You can define a list of banned words or phrases in [slang words file](slang_words.txt), and the bot will automatically delete any message containing them.
